@@ -1,9 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../screens/Home";
-// import Login from '../screens/Login';
-// import Signup from '../screens/Signup';
-// import Landing from '../screens/Landing';
 import Profile from "../screens/Profile";
 import AddRecipe from "../screens/AddRecipe";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -27,7 +24,7 @@ const MyTabNavigator = () => {
           tabBarLabel: "Add recipe",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="add" color={color} size={size} />
-          ),
+          )
         }}
       />
       
@@ -38,24 +35,20 @@ const MyTabNavigator = () => {
           tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" color={color} size={size} />
-          ),
-          // tabBarBadge: 3,
+          )
         }}
       />
      
-       <Tab.Screen
+      <Tab.Screen
         name="Profile"
         component={Profile}
         options={{
           tabBarLabel: "Profile",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person" color={color} size={size} />
-          ),
+          )
         }}
       />
-      {/* <Tab.Screen name="Login" component={Login} /> */}
-      {/* <Tab.Screen name="Signup" component={Signup} /> */}
-      {/* <Tab.Screen name="Landing" component={Landing} /> */}
     </Tab.Navigator>
   );
 };

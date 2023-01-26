@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { StyleSheet, Text, View } from 'react-native';
 import Page from '../components/Page';
 
-const AddRecipe = () => {
+const AddRecipe: FC = () => {
   return (
     <Page>
       <Text>Add recipe</Text>
