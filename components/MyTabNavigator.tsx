@@ -5,7 +5,15 @@ import Profile from "../screens/Profile";
 import AddRecipe from "../screens/AddRecipe";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-const Tab = createBottomTabNavigator();
+// props for the bottomTab nav
+export type RootTabParamList = {
+  Home: undefined;
+  Profile: undefined;
+  AddRecipe: undefined;
+};
+
+// create bottom tab with props
+const Tab = createBottomTabNavigator<RootTabParamList>();
 
 const MyTabNavigator = () => {
   return (
@@ -18,7 +26,7 @@ const MyTabNavigator = () => {
       }}
     >
       <Tab.Screen
-        name="Add Recipe"
+        name="AddRecipe"
         component={AddRecipe}
         options={{
           tabBarLabel: "Add recipe",

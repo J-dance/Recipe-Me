@@ -17,7 +17,7 @@ const Landing = () => {
     <Page>
       <Button
         onPress={loginUser}
-        title="Login"
+        title="Log in"
         color="#D44D5C"
         accessibilityLabel="Log in to your account"
       />
