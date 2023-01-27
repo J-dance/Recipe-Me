@@ -19,8 +19,8 @@ const Landing = () => {
     <Page>
       <SvgXml xml={bookIconXml} width={100} height={100} />
       <View style={styles.titleContainer}>
-        <Text style={styles.titleText1}>Recipe-</Text>
-        <Text style={styles.titleText2}>Me</Text>
+        <Text style={[styles.titleText, {color: "#FFFFFF"}]}>Recipe-</Text>
+        <Text style={[styles.titleText, {color: "#FF9000"}]}>Me</Text>
       </View>
       <Button
         onPress={loginUser}
@@ -39,17 +39,12 @@ const styles = StyleSheet.create({
     borderColor: '#FFFFFF',
     width: '80%',
     borderWidth: 2,
-    paddingVertical: 10
+    paddingVertical: 10,
+    marginVertical: 30
   },
-  titleText1: {
+  titleText: {
     fontFamily: 'Donegal-One',
     fontSize: 42,
-    color: '#FFFFFF'
-  },
-  titleText2: {
-    fontFamily: 'Donegal-One',
-    fontSize: 42,
-    color: 'orange'
   }
 })
 

@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
+import { View } from 'react-native';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -18,6 +19,7 @@ export default function App() {
     recipes: []
   });
 
+  // import font from assets
   const [fontsLoaded] = useFonts({
     'Donegal-One': require('./assets/fonts/DonegalOne-Regular.ttf'),
   });
@@ -34,8 +36,10 @@ export default function App() {
 
   return (
     <UserContext.Provider value= {{ userData, setUserData }}>
-      <NavigationContainer>   
+      <NavigationContainer >   
         <AuthContainer />
+        {/* <View style={{flex:1}} onLayout={onLayoutRootView}>
+        </View> */}
         <StatusBar style="auto" />
       </NavigationContainer>
     </UserContext.Provider>
