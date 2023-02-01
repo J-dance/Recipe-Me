@@ -37,9 +37,9 @@ export default function App() {
   return (
     <UserContext.Provider value= {{ userData, setUserData }}>
       <NavigationContainer >   
-        <AuthContainer />
-        {/* <View style={{flex:1}} onLayout={onLayoutRootView}>
-        </View> */}
+        <View style={{flex:1}} onLayout={onLayoutRootView}>
+          <AuthContainer />
+        </View>
         <StatusBar style="auto" />
       </NavigationContainer>
     </UserContext.Provider>

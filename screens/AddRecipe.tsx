@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import Page from "../components/Page";
 import type { BottomTabScreenProps } from "@react-navigation/bottom-tabs";

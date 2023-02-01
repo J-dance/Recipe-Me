@@ -2,7 +2,7 @@
 
 # to do:
 
-1. add splash screen and icon for app
+1. add splash screen and icon for app **DONE**
 2. build out pages
   - login
   - sign up

@@ -31,7 +31,7 @@ const MyTabNavigator = () => {
         options={{
           tabBarLabel: "Add recipe",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="add" color={color} size={size} />
+            <Ionicons name="add-circle" color={color} size={size} />
           )
         }}
       />

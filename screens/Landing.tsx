@@ -1,38 +1,45 @@
 import React from "react";
 import Page from "../components/Page";
 import { Button, StyleSheet, View, Text } from "react-native";
-import { useUserContext } from "../assets/context";
 import { SvgXml } from "react-native-svg";
 import { xml as bookIconXml } from "../assets/icons/book.js";
+import { RootStackParamList } from '../components/LoginNavigator';
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-const Landing = () => {
-  const { setUserData } = useUserContext();
-  const loginUser = () => {
-    setUserData({
-      name: "",
-      id: "",
-      authenticated: true,
-      recipes: [],
-    });
-  };
+type Props = NativeStackScreenProps<
+  RootStackParamList,
+  "Landing",
+  "loginNavigation"
+>;
+
+const Landing = ({ navigation }: Props) => {
+  
   return (
     <Page>
-      <SvgXml xml={bookIconXml} width={100} height={100} />
-      <View style={styles.titleContainer}>
-        <Text style={[styles.titleText, {color: "#FFFFFF"}]}>Recipe-</Text>
-        <Text style={[styles.titleText, {color: "#FF9000"}]}>Me</Text>
+      <View style={styles.landingContainer}>
+        <SvgXml xml={bookIconXml} width={100} height={100} />
+        <View style={styles.titleContainer}>
+          <Text style={[styles.titleText, {color: "#FFFFFF"}]}>Recipe-</Text>
+          <Text style={[styles.titleText, {color: "#FF9000"}]}>Me</Text>
+        </View>
+        <Button
+          onPress={() => navigation.navigate("Login")}
+          title="Log in"
+          color="#FFFFFF"
+          accessibilityLabel="Log in to your account"
+        />
       </View>
-      <Button
-        onPress={loginUser}
-        title="Log in"
-        color="#FFFFFF"
-        accessibilityLabel="Log in to your account"
-      />
     </Page>
   );
 };
 
 const styles = StyleSheet.create({
+  landingContainer: {
+    flex: 1,
+    width: "100%",
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
   titleContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
