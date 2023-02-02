@@ -1,13 +1,27 @@
-import React, { FC } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Page from '../components/Page';
+import React, { FC } from "react";
+import { StyleSheet, Text, View, FlatList } from "react-native";
+import Page from "../components/Page";
+import TitleSection from "../components/TitleSection";
+import SearchBar from "../components/SearchBar";
 
 const Home: FC = () => {
   return (
     <Page>
-      <Text>Home</Text>
-    </Page>
-  )
-}
+      <TitleSection
+        size="s"
+        text1={{
+          text: "Ho",
+          color: "#FFFFFF",
+        }}
+        text2={{
+          text: "me",
+          color: "#FF9000",
+        }}
+      />
 
-export default Home
+      <SearchBar />
+    </Page>
+  );
+};
+
+export default Home;
