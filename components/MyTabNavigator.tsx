@@ -23,6 +23,7 @@ const MyTabNavigator = () => {
       backBehavior="none"
       screenOptions={{
         tabBarActiveTintColor: '#D44D5C',
+        headerShown: false
       }}
     >
       <Tab.Screen

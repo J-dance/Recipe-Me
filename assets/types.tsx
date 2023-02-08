@@ -7,8 +7,12 @@ export type Recipe = {
   id: string
   title: string
   description: string
-  categories: string[]
+  prepTime: number; // unit: [mins]
+  cookTime: number; // unit: [mins]
+  category: string[]
   instructions: string[]
+  image?: string | undefined;  // not sure..
+  difficulty: "easy" | "medium" | "hard";
 };
 
 export interface User {

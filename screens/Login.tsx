@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     marginTop: 8
   },
   errorTextContainer: {
-    minHeight: 30
+    minHeight: 45
   },
   container: {
     flex: 1,

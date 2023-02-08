@@ -1,8 +1,13 @@
 import React from "react";
 import { StyleSheet, TextInput, View } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { Recipe } from "../assets/types";
 
-const SearchBar = () => {
+interface SeachBarProps {
+  items: Recipe[]
+};
+
+const SearchBar = ({items}: SeachBarProps) => {
   const handleChange = () => {};
 
   return (
